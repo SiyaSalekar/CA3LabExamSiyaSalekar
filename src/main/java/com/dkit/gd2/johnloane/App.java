@@ -1,8 +1,6 @@
 package com.dkit.gd2.johnloane;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * OOP CA3
@@ -43,11 +41,21 @@ public class App
         employees.add(new Employee("David","Johnson"));
         employees.add(new Employee("Joe","Docker"));
         employees.add(new Employee("Peter","Anderson"));
+        employees.add(new Employee("Peter","Anderson"));
         System.out.println();
         pickLuckyWinner(employees);
 
 
 //        questionTwoPartB();
+        //using Hashset - unique values
+
+        System.out.println();
+        Set<String> uniqueNames = new HashSet<>();
+        for(Employee e: employees){
+            uniqueNames.add(e.getFirstName());
+        }
+        printUniqueNames(uniqueNames);
+
 //        questionTwoPartC();
 //        questionTwoPartD();
 //
@@ -95,7 +103,13 @@ public class App
             System.out.println("Lucky Winner is :"
                     + employees.get(index));
 
+    }
 
+    public static void printUniqueNames(Set<String> uniqueNames){
+        System.out.println("Unique First Names: ");
+        for (String s: uniqueNames){
+            System.out.println(s);
+        }
     }
     //The method below relates to Question 4
     private static void compareTwoStudents()
