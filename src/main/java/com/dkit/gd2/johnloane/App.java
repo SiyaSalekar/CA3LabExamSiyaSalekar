@@ -40,10 +40,10 @@ public class App
         employees.add(new Employee("Nathan","Gray"));
         employees.add(new Employee("Lucas","Trenauskas"));
         employees.add(new Employee("David","Johnson"));
-        employees.add(new Employee("David","Johnson"));
-        employees.add(new Employee("David","Johnson"));
+        employees.add(new Employee("David","Killy"));
+        employees.add(new Employee("David","Richar"));
         employees.add(new Employee("Joe","Docker"));
-        employees.add(new Employee("Peter","Anderson"));
+        employees.add(new Employee("Peter","Juiel"));
         employees.add(new Employee("Peter","Anderson"));
         System.out.println();
         pickLuckyWinner(employees);
@@ -71,6 +71,15 @@ public class App
         printNameAndCount(firstNames,NameCountMap);
 
 //        questionTwoPartD();
+        System.out.println();
+
+        LinkedList<Employee> waitingList = new LinkedList<>();
+
+        for(Employee e: employees){
+            waitingList.add(e);
+        }
+
+        getNextOnWaitingList(waitingList);
 //
 //        //Question 3
 //        List<String> oneHundredStrings = new ArrayList<>();
@@ -144,6 +153,19 @@ public class App
             System.out.println("{"+firstName+"} -> "+count);
         }
 
+    }
+
+    public static void getNextOnWaitingList(LinkedList<Employee> waitingList){
+        ListIterator iterator = waitingList.listIterator();
+
+        for(Employee e: waitingList) {
+            while (iterator.hasNext()) {
+                iterator.next();
+
+            }
+            System.out.println("Next waiting employee - ");
+            System.out.println(e);
+        }
 
     }
     //The method below relates to Question 4
