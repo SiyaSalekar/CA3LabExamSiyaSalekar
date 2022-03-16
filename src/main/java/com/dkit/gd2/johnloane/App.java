@@ -2,6 +2,7 @@ package com.dkit.gd2.johnloane;
 
 import java.sql.Array;
 import java.util.*;
+import  java.util.LinkedHashSet;
 
 /**
  * OOP CA3
@@ -82,10 +83,15 @@ public class App
         getNextOnWaitingList(waitingList);
 //
 //        //Question 3
+
+        //implemented below code in removeDuplicates method -
 //        List<String> oneHundredStrings = new ArrayList<>();
 //        populateOneHundredStrings(oneHundredStrings);
 //        questionThreePartA(oneHundredStrings);
 //        questionThreePartB();
+
+        removeDuplicates();
+        //Time complexity of Linked Hash Set is - O(1)
 
 //        //Question 4
 //        compareTwoStudents();
@@ -223,6 +229,29 @@ public class App
             {
                 oneHundredStrings.add("Swift");
             }
+        }
+    }
+
+    public static void removeDuplicates(){
+        List<String> oneHundredStrings = new ArrayList<>();
+        populateOneHundredStrings(oneHundredStrings);
+        LinkedHashSet<String> newStringSet = new LinkedHashSet<>();
+
+        System.out.println("Original Strings");
+        System.out.println();
+        for(String s: oneHundredStrings){
+            System.out.println(s);
+        }
+
+        for(String s: oneHundredStrings){
+            newStringSet.add(s);
+        }
+        System.out.println();
+
+        System.out.println("After implementing LinkedHashSet ");
+        System.out.println();
+        for(String s: newStringSet){
+            System.out.println(s);
         }
     }
 }
