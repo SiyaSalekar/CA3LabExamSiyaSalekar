@@ -1,6 +1,7 @@
 package com.dkit.gd2.johnloane;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -12,7 +13,7 @@ public class App
     public static void main( String[] args )
     {
         //Question 1
-        ArrayList students = new ArrayList<>();
+        ArrayList<Student> students = new ArrayList<>();
         students.add(new Student(1,"Tanya Martin",12));
         students.add(new Student(2,"John Thompson",24));
         students.add(new Student(3,"Patrick Miller",19));
@@ -42,9 +43,16 @@ public class App
     }
 
 
-    public static void questionOnePartB(ArrayList students){
+    public static void questionOnePartB(ArrayList<Student> students){
 
+        StudentNameComparator nameComparator = new StudentNameComparator();
+        Collections.sort( students, nameComparator);
+        for (Student s: students)
+        {
+            System.out.println(s);
+        }
     }
+
     //The method below relates to Question 4
     private static void compareTwoStudents()
     {
