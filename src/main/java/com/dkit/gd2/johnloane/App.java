@@ -20,11 +20,33 @@ public class App
         students.add(new Student(4,"Robin Daly",20));
 
         questionOnePartB(students);
+        System.out.println();
         questionOnePartC(students);
-//        questionOnePartD();
-//
+
+        // questionOnePartD();
+
+        //Comment on Time and Space Complexity of Arraylist
+        //Time
+        //Adding elements - O(1)
+        //Sort elements - O(n^2)
+        //Space
+        //
+        //
+
+
+
 //        //Question 2
 //        questionTwoPartA();
+        ArrayList<Employee> employees = new ArrayList<>();
+        employees.add(new Employee("Nathan","Gray"));
+        employees.add(new Employee("Lucas","Trenauskas"));
+        employees.add(new Employee("David","Johnson"));
+        employees.add(new Employee("Joe","Docker"));
+        employees.add(new Employee("Peter","Anderson"));
+        System.out.println();
+        pickLuckyWinner(employees);
+
+
 //        questionTwoPartB();
 //        questionTwoPartC();
 //        questionTwoPartD();
@@ -65,6 +87,16 @@ public class App
         }
     }
 
+    public static void pickLuckyWinner(ArrayList<Employee> employees){
+
+            // using Math.random()
+            int index = (int)(Math.random() * employees.size());
+
+            System.out.println("Lucky Winner is :"
+                    + employees.get(index));
+
+
+    }
     //The method below relates to Question 4
     private static void compareTwoStudents()
     {
