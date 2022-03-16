@@ -20,7 +20,7 @@ public class App
         students.add(new Student(4,"Robin Daly",20));
 
         questionOnePartB(students);
-//        questionOnePartC();
+        questionOnePartC(students);
 //        questionOnePartD();
 //
 //        //Question 2
@@ -45,8 +45,20 @@ public class App
 
     public static void questionOnePartB(ArrayList<Student> students){
 
+        System.out.println("Sort by Name");
         StudentNameComparator nameComparator = new StudentNameComparator();
         Collections.sort( students, nameComparator);
+        for (Student s: students)
+        {
+            System.out.println(s);
+        }
+    }
+
+    public static void questionOnePartC(ArrayList<Student> students){
+
+        System.out.println("Sort by Age");
+        StudentAgeComparator ageComparator = new StudentAgeComparator();
+        Collections.sort( students, ageComparator);
         for (Student s: students)
         {
             System.out.println(s);
