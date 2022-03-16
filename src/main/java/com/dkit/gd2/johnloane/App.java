@@ -12,30 +12,39 @@ public class App
     public static void main( String[] args )
     {
         //Question 1
-        questionOnePartA();
-        questionOnePartB();
-        questionOnePartC();
-        questionOnePartD();
+        ArrayList students = new ArrayList<>();
+        students.add(new Student(1,"Tanya Martin",12));
+        students.add(new Student(2,"John Thompson",24));
+        students.add(new Student(3,"Patrick Miller",19));
+        students.add(new Student(4,"Robin Daly",20));
 
-        //Question 2
-        questionTwoPartA();
-        questionTwoPartB();
-        questionTwoPartC();
-        questionTwoPartD();
-
-        //Question 3
-        List<String> oneHundredStrings = new ArrayList<>();
-        populateOneHundredStrings(oneHundredStrings);
-        questionThreePartA(oneHundredStrings);
-        questionThreePartB();
-
-        //Question 4
-        compareTwoStudents();
-        questionFourPartA();
-        questionFourPartB();
-        questionFourPartC();
+        questionOnePartB(students);
+//        questionOnePartC();
+//        questionOnePartD();
+//
+//        //Question 2
+//        questionTwoPartA();
+//        questionTwoPartB();
+//        questionTwoPartC();
+//        questionTwoPartD();
+//
+//        //Question 3
+//        List<String> oneHundredStrings = new ArrayList<>();
+//        populateOneHundredStrings(oneHundredStrings);
+//        questionThreePartA(oneHundredStrings);
+//        questionThreePartB();
+//
+//        //Question 4
+//        compareTwoStudents();
+//        questionFourPartA();
+//        questionFourPartB();
+//        questionFourPartC();
     }
 
+
+    public static void questionOnePartB(ArrayList students){
+
+    }
     //The method below relates to Question 4
     private static void compareTwoStudents()
     {
