@@ -17,8 +17,11 @@ public class Student
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(id, name, age);
+    public int hashCode()   // has function that used both id and name
+    {
+        int hash = 5;
+        hash = 89 * hash + this.id;
+        return hash;
     }
 
     public Student(int id, String name, int age)

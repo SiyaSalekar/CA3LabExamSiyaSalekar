@@ -26,12 +26,9 @@ public class App
         // questionOnePartD();
 
         //Comment on Time and Space Complexity of Arraylist
-        //Time
         //Adding elements - O(1)
-        //Sort elements - O(n^2)
-        //Space
-        //
-        //
+        //Sort elements - O(n logn)
+
 
 
 
@@ -93,9 +90,13 @@ public class App
         removeDuplicates();
         //Time complexity of Linked Hash Set is - O(1)
 
+        System.out.println();
+
 //        //Question 4
-//        compareTwoStudents();
+       compareTwoStudents();
 //        questionFourPartA();
+//if equals method is not implemented returns false.
+        // comparison doesnt take place
 //        questionFourPartB();
 //        questionFourPartC();
     }
