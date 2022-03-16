@@ -1,5 +1,6 @@
 package com.dkit.gd2.johnloane;
 
+import java.sql.Array;
 import java.util.*;
 
 /**
@@ -39,6 +40,8 @@ public class App
         employees.add(new Employee("Nathan","Gray"));
         employees.add(new Employee("Lucas","Trenauskas"));
         employees.add(new Employee("David","Johnson"));
+        employees.add(new Employee("David","Johnson"));
+        employees.add(new Employee("David","Johnson"));
         employees.add(new Employee("Joe","Docker"));
         employees.add(new Employee("Peter","Anderson"));
         employees.add(new Employee("Peter","Anderson"));
@@ -57,6 +60,16 @@ public class App
         printUniqueNames(uniqueNames);
 
 //        questionTwoPartC();
+        System.out.println();
+
+        Map<String, Integer> NameCountMap = new HashMap<>();
+
+        ArrayList<String> firstNames = new ArrayList<>();
+        for(Employee e:employees){
+            firstNames.add(e.getFirstName());
+        }
+        printNameAndCount(firstNames,NameCountMap);
+
 //        questionTwoPartD();
 //
 //        //Question 3
@@ -110,6 +123,28 @@ public class App
         for (String s: uniqueNames){
             System.out.println(s);
         }
+    }
+
+    public static void printNameAndCount(ArrayList<String> firstnames, Map<String, Integer> NameCountMap){
+        System.out.println("{name} -> "+"count");
+        for(String firstname : firstnames) {
+            Integer count = NameCountMap.get(firstname);
+            if (count != null) {
+
+                NameCountMap.put(firstname,(count+1));
+
+            } else {
+                NameCountMap.put(firstname, 1); // add new word with count 1
+            }
+        }
+
+        for (Map.Entry<String, Integer> entry : NameCountMap.entrySet()) {
+            String firstName = entry.getKey();
+            Integer count = entry.getValue();
+            System.out.println("{"+firstName+"} -> "+count);
+        }
+
+
     }
     //The method below relates to Question 4
     private static void compareTwoStudents()
